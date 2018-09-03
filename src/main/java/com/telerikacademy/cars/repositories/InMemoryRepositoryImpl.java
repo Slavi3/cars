@@ -4,6 +4,7 @@ package com.telerikacademy.cars.repositories;
 import com.telerikacademy.cars.models.base.ModelBase;
 import com.telerikacademy.cars.repositories.base.GenericRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
