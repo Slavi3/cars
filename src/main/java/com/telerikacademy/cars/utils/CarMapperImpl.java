@@ -14,16 +14,20 @@ public class CarMapperImpl implements CarMapper {
     public CarViewModel map(Car model) {
         CarViewModel vm = new CarViewModel();
         vm.id = model.getId();
-        vm.name = model.getName();
-        vm.secretIdentity = model.getSecretIdentity();
+        vm.make = model.getMake();
+        vm.carModel = model.getCarModel();
+        vm.power=model.getPower();
+        vm.cubicCapacity=model.getCubicCapacity();
         return vm;
     }
 
     @Override
     public Car map(CarViewModel viewModel) {
         Car model = new Car();
-        model.setName(viewModel.name);
-        model.setSecretIdentity(viewModel.secretIdentity);
+        model.setMake(viewModel.make);
+        model.setCarModel(viewModel.carModel);
+        model.setCubicCapacity(viewModel.cubicCapacity);
+        model.setPower(viewModel.power);
         return model;
     }
 
@@ -38,8 +42,10 @@ public class CarMapperImpl implements CarMapper {
     public CarDetailsViewModel mapDetails(Car model) {
         CarDetailsViewModel vm = new CarDetailsViewModel();
         vm.id = model.getId();
-        vm.name = model.getName();
-        vm.secretIdentity = model.getSecretIdentity();
+        vm.make = model.getMake();
+        vm.carModel = model.getCarModel();
+        vm.cubicCapacity=model.getCubicCapacity();
+        vm.power=model.getPower();
         return vm;
     }
 }
